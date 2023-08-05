@@ -5,7 +5,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container flex-lg-column">
     <a class="navbar-brand mx-lg-auto mb-lg-4" href="#">
-      <span class="h4 d-block d-lg-none">Mahesh Kshirsagar</span>
+      <span class="h4 d-block d-lg-none">Portfolio</span>
       <img src="../assets/img/Mahesh M.png" class="d-none d-lg-block rounded-circle mt-4" alt="maheshk" />
     </a>
     <button #navbarToggler class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -14,24 +14,24 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto flex-lg-column text-lg-center">
         <li class="nav-item">
-          <span class="h3 text-brand d-none d-lg-block">Mahesh K</span>
+          <span class="h3 d-none d-lg-block text-brand">Mahesh K</span>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" [class.active]="activeNavItem === 'home'">
           <a (click)="collapseNav()" class="nav-link" href="#home"> Home </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" [class.active]="activeNavItem === 'about'">
           <a (click)="collapseNav()" class="nav-link" href="#about"> About </a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" [class.active]="activeNavItem === 'skill'">
           <a (click)="collapseNav()" class="nav-link" href="#skill">Skill</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" [class.active]="activeNavItem === 'work'">
           <a (click)="collapseNav()" class="nav-link" href="#work">Work</a>
         </li>
         <!-- <li class="nav-item">
           <a (click)="collapseNav()" class="nav-link" href="#blog"> Blog </a>
         </li> -->
-        <li class="nav-item">
+        <li class="nav-item" [class.active]="activeNavItem === 'contact'">
           <a (click)="collapseNav()" class="nav-link" href="#contact">
             Contact
           </a>
@@ -57,10 +57,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
-          <img src="../assets/img/Mahesh M.png" class="w-50 p-3 mt-2 d-block d-lg-none rounded-circle mx-auto"
-            alt="maheshk" />
+          <img src="../assets/img/Mahesh M.png" class="w-50 p-3 mt-2 d-block d-lg-none mx-auto" alt="maheshk" />
           <h1 class="display-4 fw-bold">
-            Hi, I'm <span class="text-brand">Mahesh Kshirsagar</span>
+            Hi, I'm <span class="headName">Mahesh Kshirsagar</span>
             <!--             
             from
             <span style="color: orange">In</span>
@@ -203,10 +202,10 @@
                     <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
                       alt="react" />
                   </div>
-                  <div class="grid-item">
+                  <!-- <div class="grid-item">
                     <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white"
                       alt="redux" />
-                  </div>
+                  </div> -->
                   <div class="grid-item">
                     <img
                       src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"
@@ -219,13 +218,13 @@
                   </div>
                   <div class="grid-item">
                     <img
-                      src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4.svg?style=for-the-badge&logo=Tailwind-CSS&logoColor=white"
-                      alt="tailwind css" />
+                      src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"
+                      alt="tailwind-css">
                   </div>
                   <div class="grid-item">
                     <img
                       src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
-                      alt="" />
+                      alt="github" />
                   </div>
                   <div class="grid-item">
                     <img alt="git"
@@ -235,14 +234,13 @@
                   <div class="grid-item">
                     <img
                       src="https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white"
-                      alt="" />
+                      alt="Material--UI" />
                   </div>
-
-                  <div class="grid-item">
+                  <!-- <div class="grid-item">
                     <img
                       src="https://camo.githubusercontent.com/fd60ad1cae960eb3117e20dc1305b39f820004bf601b0e00ea032eccb9897dfd/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d6e706d26636f6c6f723d434233383337266c6f676f3d6e706d266c6f676f436f6c6f723d464646464646266c6162656c3d"
-                      alt="" />
-                  </div>
+                      alt="NPM" />
+                  </div> -->
                   <div class="grid-item">
                     <img
                       src="https://camo.githubusercontent.com/029c025c6da46b2fa8f15a3fa00261b9045d7b2a87a9692d437ee27b511c6f63/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76313f7374796c653d666f722d7468652d6261646765266d6573736167653d466972656261736526636f6c6f723d323232323232266c6f676f3d4669726562617365266c6f676f436f6c6f723d464643413238266c6162656c3d"
@@ -254,12 +252,11 @@
                       alt=""
                     />
                   </div> -->
-
-                  <div class="grid-item">
+                  <!-- <div class="grid-item">
                     <img
                       src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white"
-                      alt="" />
-                  </div>
+                      alt="netlify" />
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -327,22 +324,7 @@
           <h2>Recent Projects</h2>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-4 mb-4">
-          <div class="card-custom rounded-4 bg-base shadow-effect">
-            <div class="card-custom-image rounded-4">
-              <img class="rounded-4" src="../assets/project-1.jpeg" alt="" />
-            </div>
-            <div class="card-custom-content p-4">
-              <h4>Mahesh Digital-CV</h4>
-              <p class="text">
-                This is my Digital-CV mean virtual information about my exprience, my eduction, skill, tech stack,
-                certification and project created by me. Project deploy on Netlify.
-              </p>
-              <a href="https://maheshk-cv.netlify.app/" target="_blank" class="link-custom">Click here</a>
-            </div>
-          </div>
-        </div>
+      <div class="row d-flex">
         <div class="col-lg-4 mb-4">
           <div class="card-custom rounded-4 bg-base shadow-effect">
             <div class="card-custom-image rounded-4">
@@ -351,47 +333,15 @@
             <div class="card-custom-content p-4">
               <h4>Web E-Store</h4>
               <p class="text">
-                Web e-commerce store using Fake Store Api. Created UI using
-                Angular and Angular Material. Add category wise filter, searching and
+                Web e-commerce store using fake api, created frontend UI using
+                Angular and Angular Material. Add category wise filter and
                 sorting. Add Stripe payment gateway.
               </p>
-              <a href="#" class="link-custom" target="_blank">Click here</a>
+              <a href="#" class="link-custom" target="_blank">Read More</a>
             </div>
           </div>
         </div>
         <div class="col-lg-4 mb-4">
-          <div class="card-custom rounded-4 bg-base shadow-effect">
-            <div class="card-custom-image rounded-4">
-              <img class="rounded-4" src="../assets/project-2.png" alt="" />
-            </div>
-            <div class="card-custom-content p-4">
-              <h4>Dynamic Form</h4>
-              <p class="text">
-                Create Dynamic Form creation using Reactive Form, add form
-                validation, also create form using json dataset. Create Resuable Component in Angular.
-              </p>
-              <a href="#" class="link-custom" target="_blank">Click here</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 mb-4">
-          <div class="card-custom rounded-4 bg-base shadow-effect">
-            <div class="card-custom-image rounded-4">
-              <img class="rounded-4" src="../assets/project-3.png" alt="" />
-            </div>
-            <div class="card-custom-content p-4">
-              <h4>Shopkeeper</h4>
-              <p class="text">
-                Shopkeeper provides a user-friendly interface for the shopkeeper management. User
-                Authentication to ensure security and personalized access. App may have search and filtering
-                functionalities to help the shopkeeper.
-              </p>
-              <a href="#" class="link-custom" target="_blank">Click here</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="col-lg-4 mb-4">
           <div class="card-custom rounded-4 bg-base shadow-effect">
             <div class="card-custom-image rounded-4">
               <img class="rounded-4" src="../assets/project-2.png" alt="" />
@@ -403,7 +353,7 @@
                 validation validation, also create form using json data set.
                 Create Resuable Component in Angular.
               </p>
-              <a href="#" class="link-custom">Click here</a>
+              <a href="#" class="link-custom" target="_blank">Read More</a>
             </div>
           </div>
         </div>
@@ -419,7 +369,55 @@
                 Angular and Angular Material. Add category wise filter and
                 sorting. Add Stripe payment gateway.
               </p>
-              <a href="#" class="link-custom">Click here</a>
+              <a href="#" class="link-custom" target="_blank">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card-custom rounded-4 bg-base shadow-effect">
+            <div class="card-custom-image rounded-4">
+              <img class="rounded-4" src="../assets/project-1.jpeg" alt="" />
+            </div>
+            <div class="card-custom-content p-4">
+              <h4>Mahesh Digital-CV</h4>
+              <p class="text">
+                This is my Digital-CV mean brigf information about my exprience
+                and eduction and skill. This project created using Html, Css,
+                Javascript and Deploy on Netlify.
+              </p>
+              <a href="https://maheshk-cv.netlify.app/" target="_blank" class="link-custom">Read More</a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col-lg-4 mb-4">
+          <div class="card-custom rounded-4 bg-base shadow-effect">
+            <div class="card-custom-image rounded-4">
+              <img class="rounded-4" src="../assets/project-2.png" alt="" />
+            </div>
+            <div class="card-custom-content p-4">
+              <h4>Dynamic Form</h4>
+              <p class="text">
+                Create Dynamic Form generation using Reactive Form, add form
+                validation validation, also create form using json data set.
+                Create Resuable Component in Angular.
+              </p>
+              <a href="#" class="link-custom">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card-custom rounded-4 bg-base shadow-effect">
+            <div class="card-custom-image rounded-4">
+              <img class="rounded-4" src="../assets/project-3.png" alt="" />
+            </div>
+            <div class="card-custom-content p-4">
+              <h4>Shopkeeper</h4>
+              <p class="text">
+                Web e-commerce store using fake api, created frontend UI using
+                Angular and Angular Material. Add category wise filter and
+                sorting. Add Stripe payment gateway.
+              </p>
+              <a href="#" class="link-custom">Read More</a>
             </div>
           </div>
         </div> -->
@@ -434,10 +432,10 @@
         <div class="col-lg-8">
           <h1 class="display-4 fw-bold">Coming soon...</h1>
           <p class="lead mt-2 mb-4">I'm a passionate about Development and Learning Enthusiastic. I am always
-                        looking
-                        forward to
-                        achallenging opportunity to make personal and professional growth.</p>
-                    <a href="#work" class="btn btn-brand">Download Resume</a>
+            looking
+            forward to
+            achallenging opportunity to make personal and professional growth.</p>
+          <a href="#work" class="btn btn-brand">Download Resume</a>
         </div>
       </div>
     </div>

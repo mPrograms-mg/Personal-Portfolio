@@ -3,19 +3,31 @@
 // @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap");
 :root {
+  // --color-body: #0a2647;
+  // --color-heading: #144272;
+  // --color-base: #205295;
+  // --color-base2: #2c74b3;
+  // --color-brand: #ffffff;
+  // --color-brand2: #2c74b3;
+  // --sidbar-width: 240px;
   --color-body: #b6cdce;
   --color-heading: #f7f7f7;
-  --color-base: #033f47;
-  --color-base2: #022a30;
-  --color-brand: #e0f780;
-  --color-brand2: #deff58;
+  // --color-base: #033f47;
+  // --color-base2: #022a30;
+  // --color-brand: #e0f780;
+  // --color-brand2: #deff58;
   --sidbar-width: 240px;
   // --font-base: "Poppins",
   --font-base: "Bai Jamjuree";
+
+  --color-base: #001c30;
+  --color-base2: #04293a;
+  --color-brand: #e0f780;
+  --color-brand2: #e0f780;
 }
 
 body {
-  background-color: #003147;
+  background-color: #0b2632;
   color: var(--color-body);
   font-family: var(--font-base), sans-serif;
 }
@@ -183,22 +195,6 @@ img {
   width: 100px;
 }
 
-@media (min-width: 992px) {
-  .navbar {
-    min-height: 100vh;
-    width: var(--sidbar-width);
-    background: linear-gradient(rgba(3, 63, 71, 0.8), #003147);
-    background-position: center;
-  }
-  .navbar-brand img {
-    border: 3px solid var(--color-brand);
-    // margin-top: -150px;
-  }
-  #content-wrapper {
-    padding-left: var(--sidbar-width);
-  }
-}
-
 // bottom to top
 
 :host {
@@ -247,4 +243,30 @@ img {
 .scroll-icon {
   font-size: 15px;
   color: var(--color-heading);
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    min-height: 100vh;
+    width: var(--sidbar-width);
+    background: linear-gradient(rgba(103, 108, 108, 0.8), #02354e);
+    background-position: center;
+  }
+  .navbar-brand img {
+    border: 3px solid var(--color-brand);
+    // margin-top: -150px;
+  }
+  #content-wrapper {
+    padding-left: var(--sidbar-width);
+  }
+
+  .nav-item.active {
+    background-color: var(--color-base2);
+  }
+}
+.headName {
+  background: linear-gradient(to left, #00ff00 0%, #00ffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: max-content;
 }
